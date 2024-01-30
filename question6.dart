@@ -1,29 +1,16 @@
 void main() {
-  Map world = {
+  Map<String, Map<String, dynamic>> world = {
     "pakistan": {
-      "capital city": "islamabad",
+      "capitalcity": "islamabad",
       "currency": "rupees",
       "language": "urdu"
     },
-    "england": {
-      "capital city": "london",
-      "currency": "pound",
-      'language': "english"
+    "china": {
+      "capitalcity": "shanghai",
+      "currency": "yuan",
+      "language": "chinese"
     },
-    "France": {
-      "capital city": "paris",
-      "currency": "euro",
-      "language": "french"
-    }
+    "japan": {"capitalcity": "tokyo", "currency": "yen", "language": "urdu"},
   };
-
-  var country = 'pakistan';
-  if (world.containsKey(country)) {
-    Map countryinfo = world[country];
-    var capitalcity = countryinfo['capital city'];
-    var currency = countryinfo['currency'];
-    print("${currency}-capital:${capitalcity}, currency:${currency}");
-  } else {
-    print("country does not exist");
-  }
+  print(world["pakistan"]);
 }
